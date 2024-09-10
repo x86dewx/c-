@@ -1,0 +1,61 @@
+/*************************************************************************
+	> File Name: 3.c
+	> Author: yas
+	> Mail: rage_yas@hotmail.com
+	> Created Time: Thu 01 Aug 2024 05:00:43 PM CST
+ ************************************************************************/
+
+#include<stdio.h>
+#include<stdlib.h>
+
+struct Node
+{
+    int data;
+    struct Node *pNext;
+};
+
+void push_front(struct Node *pHead,int n)
+{
+    struct Node *pNew =malloc(sizeof(struct Node));
+    pNew->pNext =pHead->pNext;
+    pHead->pNext =pNew;
+    pNew->data = n;
+}
+int size(struct Node *pHead)
+{
+    struct Node *p =pHead->pNext;
+    int counter = 0;
+    while(p != NULL)
+    {
+        ++counter;
+        p =p->pNext;
+    }
+    return counter;
+}
+
+int isEmpty(struct Node *pHead)
+{
+    struct Node *p =pHead->pNext;
+    int counter = 0;
+    while(p != NULL)
+    {
+        ++counter;
+        p =p->pNext;
+    }
+    return counter == 0;
+}
+
+
+
+
+int main(void)
+{
+    struct Node head = {0,NULL};
+    printf("%d\n",size(&head));
+    push_front(&head, 1);
+    push_front(&head, 2);
+    push_front(&head, 3);
+    push_front(&head, 4);
+
+    return 0;
+}

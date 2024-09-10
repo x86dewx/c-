@@ -1,0 +1,30 @@
+#include<head.h>
+
+
+
+int  window1(int n)
+{
+    printf("\033[2J");
+    printf("\033[37;93H");
+    printf("查询模式");
+    printf("\033[0m");
+
+
+    char data[10][24]={"音视频播放器","1.查看播放列表","2.继续/暂停","3.停止","4.上一个","5.下一个","6.快进 x1","7.定位","8.播放方式 单曲","9.退出"};
+
+
+    printf("\033[70;0H");
+    return 0;
+}
+
+
+
+
+
+int main(int argc, char *argv[])
+{
+
+    window1(1);
+    
+    return 0;
+}

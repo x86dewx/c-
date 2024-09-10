@@ -1,0 +1,78 @@
+#include<head.h>
+#include"window.h"
+#include"windowforlist.h"
+#include"musiclist.h"
+#include"getchar.h"
+#include"moveforlist.h"
+
+
+
+
+int move(char s,const char *z,int *n,int *m)
+{
+    int q = 0;
+    char x[]={0};
+    char *a[1024] ={NULL};
+    int c = 0;
+    c = itisMusic(z,a);
+
+
+    if(s == 'B')
+    {
+        if(*n < 9)
+        {
+            ++*n;
+        windowsAndChages(a[q],x,*n);
+        }
+        else if(*n =9)
+        {
+            *n = 0;
+        windowsAndChages(a[q],x,*n);
+
+        }
+    }
+    if(s =='A')
+    {
+        if(*n == 0)
+        {
+            *n +=9;
+        }
+        else
+        {
+            --*n;
+        }
+        windowsAndChages(a[q],x,*n);
+    }
+    if(s =='C')
+    {
+        if(*n == 6)
+        {
+            windowsAndChages(a[q],"快进 x4",*n);
+        }
+    }
+    if(s =='D')
+    {
+        if(*n == 6)
+        {
+            windowsAndChages(a[q],"快进 x2",*n);
+        }
+    }
+    if( s= '\n')
+    {
+        if(*n == 0)
+        {
+            windowsAndChages(a[1],x,0);
+        }
+        else
+        {
+
+        }
+
+    }
+    for (int i = 0; i <c; ++i)
+    {
+           // printf("---i == %d\n",i);
+        free(a[i]); 
+    }
+    return 0;
+}
