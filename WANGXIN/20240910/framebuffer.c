@@ -14,6 +14,8 @@ void *pmem;
 struct fb_var_screeninfo vinf;
 
 
+
+
 int init_fb(char *devname)
 {
     int fd = open(devname,O_RDWR);
@@ -129,7 +131,7 @@ void drow_oblique(int x,int y,int len,float oblique,unsigned col)
 
 void drow_circle(int x,int y,int r,unsigned int col)
 {
-    for(int i=0;i<r;++i)
+    for(double i=0;i<r;i+=0.01)
     {
         float c = sqrt(r*r - i*i);
         drow_point(x - i,y + c,col);
@@ -152,6 +154,135 @@ void clear(unsigned int col)
     }
 
 }
+
+void drow_picture(int x,int y,char *picname,int w,int h)
+{
+    int fd = open(picname,O_RDONLY);
+    if(fd < 0)
+    {
+        perror("open fial\n");
+        return ;
+    }
+    lseek(fd,54,SEEK_SET);
+    unsigned char r,g ,b;
+    unsigned char *buf=(unsigned char*)malloc(w*h*3);
+    read(fd,buf,w*h*3);
+    unsigned char *p =buf;
+    for(int j = h- 1;j>=0;--j)
+    {
+        for(int i = 0;i<w;++i)
+        {
+            b=*p;p++;
+            g=*p;p++;
+            r=*p;p++;
+            if(vinf.bits_per_pixel==RGB888_FMT)
+            {
+                unsigned int col=(r<<16) | (g<<8) | (b<<0);
+                drow_point(x+i,y+j,col);
+            }
+            else if(vinf.bits_per_pixel == RGB565_FMT)
+            {
+                unsigned short col=((r>>3)<<11) | ((g>>2)<<5) | ((b>>3)<<0);
+                drow_point(x+i,y+j,col);
+            }
+        }
+    }
+    free(buf);
+    close(fd);
+}
+
+void drow_word(int x,int y,unsigned char *word,int w,int h,unsigned int col)
+{
+    for(int j = 0;j<h;++j)
+    {
+        for(int i = 0;i<w;++i)
+        {
+            unsigned char temp =word[i+j*w];
+            for(int k=0;k<8;++k)
+            {
+                if(temp &0x80)
+                {
+                    drow_point(i*8+k+x,j+y,col);
+                }
+                else
+                {
+                    //backgrond
+                }
+                temp=temp<<1;
+            }
+        }
+    }
+}
+
+
+
+
+
+int display_show_utf8(UTF8_INFO *info, int x, int y, char* zi, u32 col, u32 col1)
+{
+    unsigned long  out = 0 ;
+    int ret = enc_utf8_to_unicode_one((unsigned char*)zi,&out);
+
+    unsigned char* data = get_utf_data(info,out);
+    unsigned char temp = 0 ;
+    unsigned int i,j,k;
+    unsigned int num = 0;
+    for(i=0;i<info->height;i++)
+    {
+        for(j=0;j<info->width/8;j++)
+        {
+            temp = data[num++];
+            for(k=0;k<8;k++)
+            {
+                if(0x80&temp)
+                {
+                    drow_point( x+k+j*8, y+i, col);
+                }
+                else
+                {
+
+                    drow_point( x+k+j*8, y+i, col1);
+                }
+                temp= temp<<1;
+            }
+        }
+
+    }
+    return ret;
+}
+
+
+
+
+
+int display_show_utf8_str(UTF8_INFO *info, int arg_x, int arg_y,  char* zi, u32 col, u32 col1)
+{
+    char* temp = zi;
+    unsigned int x = arg_x ;
+    unsigned int y =  arg_y;
+
+    while(*temp != '\0')
+    {
+        int ret = display_show_utf8(info, x, y, temp, col, col1);
+        x += info->width;
+        if(x > vinf.xres_virtual)
+        {
+            x = 0;
+            y += info->height;
+            if(y > vinf.yres_virtual)
+            {
+                y = 0;
+            }
+        }
+
+        temp += ret;
+    }
+    return 0;
+}
+
+
+
+
 
 void uninitfd(int fd)
 {
