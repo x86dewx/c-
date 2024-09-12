@@ -5,9 +5,16 @@
 #include <time.h>
 
 
+typedef enum log_type
+{
+    error,
+    warning,
+    info
+}Type_log;
 
 
 extern struct tm *timeinfo;
+
 
 /*
 struct tm {
@@ -23,11 +30,19 @@ struct tm {
 };
 
 */
+typedef struct log_message
+{
+    int fd;//存放临时日志文件描述符
+    char *filename;//存放临时文件名称
+}log_t;
+
+extern log_t logt;
+
 
 extern int get_time();
-extern int creat_log(char *filename);
+extern int creat_log();
 extern int creatfile();
-extern int write_log(int type,char *event,int *fd,char *filename);
+extern int write_log(int type,char *event);
 
 /*
 type 0 error 程序发生重大错误
@@ -35,6 +50,6 @@ type 0 error 程序发生重大错误
      2 info  程序数据运行出错
 
 */
-extern int close_log(int fd);
+extern int close_log();
 
 #endif

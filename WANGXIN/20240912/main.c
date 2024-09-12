@@ -1,18 +1,24 @@
 #include"queue.h"
 #include"process.h"
 #include"pthread_mail.h"
-
+#include"log.h"
 queue_t *pr;
 
 void handle(int signo)
 {
     delete_queue(pr);
+    close_log();
     kill(getpid(),15);
 }
 
 
 int main(int argc, char *argv[])
 {
+    int ret = creat_log();
+    if(ret < 0)
+    {
+        printf("日志模块打开失败\n");
+    }
     signal(2,handle);
     queue_t *plink=creat_queue();
     if(NULL == plink)
@@ -30,7 +36,7 @@ int main(int argc, char *argv[])
     while(1)
     {
     }
-
+    
     return 0;
 }
 

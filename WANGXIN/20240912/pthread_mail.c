@@ -1,5 +1,6 @@
 #include "pthread_mail.h"
 #include "queue.h"
+#include "log.h"
 
 
 
@@ -30,6 +31,12 @@ int isMempty(Mail_t *plink)
 int send_mail(char *recvname,queue_t *plink,Mdatatype data)
 {
     Mail_t *mlink =travel_queue(plink,recvname);
+    if(NULL == mlink)
+    {
+        write_log(warning,"send_mail fail: dont`t find recvname");
+        return -1;
+    }
+
     pthread_mutex_lock(&mlink->mutex);
     Mnode_t *pnode =(Mnode_t*)malloc(sizeof(Mnode_t));
     if(NULL == pnode)
@@ -42,6 +49,7 @@ int send_mail(char *recvname,queue_t *plink,Mdatatype data)
     {
         mlink->pfront=pnode;
         mlink->prear=pnode;
+        pthread_mutex_unlock(&mlink->mutex);
         return 0;
     }
 
@@ -54,12 +62,19 @@ int send_mail(char *recvname,queue_t *plink,Mdatatype data)
 
 int  recv_mail(char *recvname,queue_t *plink,Mdatatype *q)
 {
-
     Mail_t *mlink =travel_queue(plink,recvname);
+    if(NULL == mlink)
+    {
+        write_log(warning,"recv_mail fail: dont`t find recvname");
+        return -1;
+    }
+
     pthread_mutex_lock(&mlink->mutex);
+
     Mnode_t *p=mlink->pfront;
     if(isMempty(mlink))
     {
+        pthread_mutex_unlock(&mlink->mutex);
         return -1;
     }
     if(p->pnext==NULL)
@@ -71,6 +86,7 @@ int  recv_mail(char *recvname,queue_t *plink,Mdatatype *q)
             *q = p->data;
         }
         free(p);
+        pthread_mutex_unlock(&mlink->mutex);
         return 0;
     }
     mlink->pfront=p->pnext;

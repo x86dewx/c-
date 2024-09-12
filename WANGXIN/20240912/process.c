@@ -34,11 +34,10 @@ void *get_cmd_th(void *p)
 {
     while(1)
     {
-        printf("*****************\n");
         Mdatatype q={{23},"nihao","接收模块","控制模块"};
         printf("listen cmd\n");
         send_mail("控制模块",pr,q);
-        sleep(1);
+        usleep(100000);
     }
 }
 
@@ -46,7 +45,6 @@ void *ctl_cmd_th(void *p)
 {
     while(1)
     {
-        printf("-----------------\n");
         printf("ctl cmd\n");
         Mdatatype q={0};
         int ret = recv_mail("控制模块",pr,&q);
@@ -56,7 +54,7 @@ void *ctl_cmd_th(void *p)
 
             printf("%s-->%s\n",q.recvname,q.words);
         }
-        sleep(1);
+        usleep(100000);
     }
 }
 
