@@ -44,6 +44,7 @@ int creat_log()
         return -1;
     }
     closedir(dir);
+    chdir("..");
     return 0;
     
 }
@@ -58,8 +59,10 @@ int creatfile()
     if(logt.fd < 0)
     {
         perror("open fail\n");
+        chdir("..");
         return -1;
     }
+    chdir("..");
     return 0;
 }
 

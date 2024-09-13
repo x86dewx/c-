@@ -10,6 +10,10 @@ typedef void*(*FUN_t)(void*);
 typedef struct pthread_message
 {
     int num[1024];
+    float temputer;
+    float oxy;
+    float PH;
+    float depth;
     char words[4096];
     char sendname[256];
     char recvname[256];
@@ -34,7 +38,7 @@ typedef struct Mlink
 
 typedef struct process_message
 {
-   char name[32];
+   char name[96];
    pthread_t tid;
    FUN_t pfun;
    Mail_t *pmail;
