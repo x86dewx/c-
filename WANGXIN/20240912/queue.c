@@ -45,22 +45,31 @@ int push_queue(queue_t *plink,Qdatatype data)
     plink->clen++;
     return 0;
 }
-
-
-Mail_t *travel_queue(queue_t *plink,char *name)
+Mail_t *travel_queue(queue_t *plink, char *name)
 {
-    qnode_t *p=plink->pfront;
-    while(p!=NULL)
+    if (plink == NULL || name == NULL)
     {
-        if(!strcmp(p->data.name,name))
+        return NULL;
+    }
+
+    qnode_t *p = plink->pfront;
+    while (p != NULL) 
+    {    
+        if (p->data.name == NULL) 
+        {
+            printf("Error: p->data.name is NULL\n");
+            return NULL;
+        }
+        if (!strcmp(p->data.name, name))
         {
             return p->data.pmail;
         }
-        p=p->pnext;
+
+        p = p->pnext;
     }
+
     return NULL;
 }
-
 
 int  pop_queue(queue_t *plink,Qdatatype *q)
 {

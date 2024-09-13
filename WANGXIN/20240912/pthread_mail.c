@@ -99,6 +99,7 @@ int  recv_mail(char *recvname,queue_t *plink,Mdatatype *q)
     pthread_mutex_unlock(&mlink->mutex);
     return 0;
 }
+
 int delete_mail(char *deletename,queue_t *plink)
 {
     Mail_t *mlink =travel_queue(plink,deletename);
@@ -109,5 +110,3 @@ int delete_mail(char *deletename,queue_t *plink)
     free(mlink);
     return 0;
 }
-
-

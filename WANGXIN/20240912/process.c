@@ -34,10 +34,20 @@ void *get_cmd_th(void *p)
 {
     while(1)
     {
-        Mdatatype q={{23},"nihao","接收模块","控制模块"};
+        Mdatatype q={{23},"nihao","接收命令","控制模块"};
         printf("listen cmd\n");
-        send_mail("控制模块",pr,q);
+        char *s = (char *)malloc(100);
+        if (s == NULL) 
+        {
+            perror("malloc");
+            pthread_exit(NULL);
+        }
+        strcpy(s, "控制模块");
+        pthread_mutex_lock(&pr->mutex);
+        send_mail(s,pr,q);
+        pthread_mutex_unlock(&pr->mutex);
         usleep(100000);
+        free(s);
     }
 }
 
@@ -47,7 +57,15 @@ void *ctl_cmd_th(void *p)
     {
         printf("ctl cmd\n");
         Mdatatype q={0};
-        int ret = recv_mail("控制模块",pr,&q);
+        char *s = (char *)malloc(100);
+        if (s == NULL) {
+            perror("malloc");
+            pthread_exit(NULL);
+        }
+        strcpy(s, "控制模块");
+        pthread_mutex_lock(&pr->mutex);
+        int ret = recv_mail(s,pr,&q);
+        pthread_mutex_unlock(&pr->mutex);
         if(ret != -1)
         {
            // kill(getpid(),2);
@@ -55,6 +73,7 @@ void *ctl_cmd_th(void *p)
             printf("%s-->%s\n",q.recvname,q.words);
         }
         usleep(100000);
+        free(s);
     }
 }
 
@@ -73,5 +92,43 @@ void *sed_pict_th(void *p)
     {
         printf("send pictcre\n");
         sleep(1);
+    }
+}
+
+
+
+void *get_tm_th(void *p)
+{
+    while(1)
+    {
+        float temputer=rand()%10*10+rand()%10+rand()/10;
+        sleep(3);
+    }
+}
+
+void *get_oxygenconcentration(void *p)
+{
+    while(1)
+    {
+        float oxy=rand()%10*10+rand()%10+rand()/10;
+        sleep(3);
+    }
+}
+
+void *get_ph_th(void *p)
+{
+    while(1)
+    {
+        float PH=rand()%10*10+rand()%10+rand()/10;
+        sleep(3);
+    }
+}
+
+void *get_depth(void *p)
+{
+    while(1)
+    {
+        float depth=rand()%10*10+rand()%10+rand()/10;
+        sleep(3);
     }
 }

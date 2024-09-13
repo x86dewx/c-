@@ -1,0 +1,1 @@
+[2024-09-12  20:50:24][WARNING]send_mail fail: dont`t find recvname

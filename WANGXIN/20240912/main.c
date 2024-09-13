@@ -8,7 +8,7 @@ void handle(int signo)
 {
     delete_queue(pr);
     close_log();
-    kill(getpid(),15);
+    kill(getpid(),9);
 }
 
 
