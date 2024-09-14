@@ -35,37 +35,43 @@ void *window(void *p)
         int ret = recv_mail("终端显示",pr,&q);
         if(ret != -1)
         {
-            if(!strcmp(q.sendname,"获取温度"))
+            if(!strcmp(q.sendname,"获取数据"))
             {
                 temputer[3] =temputer[2];
                 temputer[2] =temputer[1];
                 temputer[1] =temputer[0];
                 temputer[0] =(int)q.temputer;
-            }
-            else if(!strcmp(q.sendname,"获取氧气浓度"))
-            {
+                
                 oxy[3]=oxy[2];
                 oxy[2]=oxy[1];
                 oxy[1]=oxy[0];
                 oxy[0]=(int)q.oxy;
-
-            }
-            else if(!strcmp(q.sendname,"获取PH值"))
-            {
+                
                 PH[3]=PH[2];
                 PH[2]=PH[1];
                 PH[1]=PH[0];
                 PH[0]=(int)q.PH;
-
-            }
-            if(!strcmp(q.sendname,"获取深度"))
-            {
+                
+                
                 depth[3]=depth[2];
                 depth[2]=depth[1];
                 depth[1]=depth[0];
                 depth[0]=q.depth;
+            }
+            /*
+            else if(!strcmp(q.sendname,"获取氧气浓度"))
+            {
 
             }
+            else if(!strcmp(q.sendname,"获取PH值"))
+            {
+
+            }
+            if(!strcmp(q.sendname,"获取深度"))
+            {
+
+            }
+            */
         }
         drow_picture(0,0,"./780.bmp",800,600);
         display_show_utf8_str(&utf8_info,224,20,"环 境 监 测 系 统",0x00FF00FF,black);

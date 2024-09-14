@@ -105,17 +105,31 @@ void *sed_pict_th(void *p)
 
 void *get_tm_th(void *p)
 {
-    write_log(info,"获取温度进程开启");
+    write_log(info,"获取数据进程开启");
     while(1)
     {
         float temputer=rand()%(60 -15+1)+15;
+        float oxy=rand()%(15 - 10 + 1)+10;
+        float PH=rand()%(10 - 4 +1)+4;
+        float depth=rand()%(10 - 2 + 1)+2;
         Mdatatype q={0};
+        get_time();
+        char buf[64]={0};
+        sprintf(buf,"%d-%02d-%02d  %02d:%02d:%02d",timeinfo->tm_year+1900,timeinfo->tm_mon+1,timeinfo->tm_mday,timeinfo->tm_hour,timeinfo->tm_min,timeinfo->tm_sec);
         q.temputer=temputer;
+        q.oxy=oxy;
+        q.PH=PH;
+        q.depth=depth;
+        strcpy(q.time,buf);
         strcpy(q.recvname,"本地控制中心");
-        strcpy(q.sendname,"获取温度");
+        strcpy(q.sendname,"获取数据");
         send_mail("本地控制中心",pr,q);
         strcpy(q.recvname,"终端显示");
         send_mail("终端显示",pr,q);
+        strcpy(q.recvname,"报警");
+        send_mail("报警",pr,q);
+        strcpy(q.recvname,"数据库存储");
+        send_mail("数据库存储",pr,q);
         sleep(3);
 
     }
@@ -126,9 +140,7 @@ void *get_oxygenconcentration(void *p)
     write_log(info,"获取氧气浓度进程开启");
     while(1)
     {
-        float oxy=rand()%(15 - 10 + 1)+10;
         Mdatatype q={0};
-        q.oxy=oxy;
         strcpy(q.recvname,"本地控制中心");
         strcpy(q.sendname,"获取氧气浓度");
         send_mail("本地控制中心",pr,q);
@@ -143,9 +155,7 @@ void *get_ph_th(void *p)
     write_log(info,"获取PH值进程开启");
     while(1)
     {
-        float PH=rand()%(10 - 4 +1)+4;
         Mdatatype q={0};
-        q.PH=PH;
         strcpy(q.recvname,"本地控制中心");
         strcpy(q.sendname,"获取PH值");
         send_mail("本地控制中心",pr,q);
@@ -160,9 +170,7 @@ void *get_depth(void *p)
     write_log(info,"获取深度进程开启");
     while(1)
     {
-        float depth=rand()%(10 - 2 + 1)+2;
         Mdatatype q={0};
-        q.depth=depth;
         strcpy(q.recvname,"本地控制中心");
         strcpy(q.sendname,"获取深度");
         send_mail("本地控制中心",pr,q);
@@ -184,23 +192,47 @@ void *local_commend_center(void *p)
         if(ret != -1)
         {
             // kill(getpid(),2);
-            if(!strcmp(q.sendname,"获取温度"))
+            if(!strcmp(q.sendname,"获取数据"))
             {
-            //    printf("%s-->temputer = %f\n",q.sendname,q.temputer);
+                printf("%s-->temputer = %f\n",q.sendname,q.temputer);
+                printf("%s-->oxy = %f\n",q.sendname,q.oxy);
+                printf("%s-->PH = %f\n",q.sendname,q.PH);
+                printf("%s-->depth = %f\n",q.sendname,q.depth);
+                printf("%s-->time = %s\n",q.sendname,q.time);
             }
-            if(!strcmp(q.sendname,"获取氧气浓度"))
+            /*
+               if(!strcmp(q.sendname,"获取氧气浓度"))
             {
-            //    printf("%s-->oxy = %f\n",q.sendname,q.oxy);
             }
             if(!strcmp(q.sendname,"获取PH值"))
             {
-            //    printf("%s-->PH = %f\n",q.sendname,q.PH);
             }
             if(!strcmp(q.sendname,"获取深度"))
             {
-            //    printf("%s-->depth = %f\n",q.sendname,q.depth);
+            }
+            */
+        }
+        usleep(300000);
+    }
+}
+
+
+
+void *call_police(void *p)
+{
+    write_log(info,"报警进程开启");
+    while(1)
+    {
+        Mdatatype q={0};
+        int ret = recv_mail("报警",pr,&q);
+        if(ret != -1)
+        {
+            if(!strcmp(q.sendname,"获取数据"))
+            {
+                printf("报警系统收到数据\n");
             }
         }
         usleep(300000);
     }
+
 }

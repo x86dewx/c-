@@ -17,6 +17,7 @@ typedef struct pthread_message
     char words[4096];
     char sendname[256];
     char recvname[256];
+    char time[64];
 }
 Mdatatype;
 

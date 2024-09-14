@@ -25,6 +25,7 @@ void *get_oxygenconcentration(void *p);
 void *get_ph_th(void *p);
 void *get_depth(void *p);
 void *local_commend_center(void *p);
+void *call_police(void *p);
 
 #endif
 
