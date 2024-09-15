@@ -4,6 +4,7 @@
 #include"log.h"
 #include"picture.h"
 #include"sqlite.h"
+#include"connect_sever.h"
 queue_t *pr;
 
 void handle(int signo)
@@ -36,9 +37,10 @@ int main(int argc, char *argv[])
    // creat_task("获取深度",get_depth,plink);
     creat_task("本地控制中心",local_commend_center,plink);
     creat_task("终端显示",window,plink);
-    creat_task("终端显示",window,plink);
+    //creat_task("终端显示",window,plink);
     creat_task("报警",call_police,plink);
     creat_task("数据库存储",sqlite_data,plink);
+    creat_task("连接服务器",connectToserve,plink);
 
     while(1)
     {

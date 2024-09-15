@@ -41,6 +41,7 @@ int creat_log()
     if(logt.fd < 0)
     {
         perror("open fail\n");
+        chdir("..");
         return -1;
     }
     closedir(dir);

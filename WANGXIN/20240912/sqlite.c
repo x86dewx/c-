@@ -21,7 +21,7 @@ int open_sqlite()
         printf("sqlite3 exec1 fail %s\n",sqlite3_errmsg(pdb));
         return -1;
     }
-    sqlite3_exec(pdb,"begin",NULL,NULL,NULL);
+    sqlite3_exec(pdb,"begin;",NULL,NULL,NULL);
     return 0;
 }
 
@@ -31,7 +31,14 @@ int storage_message(Mdatatype data)
     char buf[128] ="insert into message_device1 values(NULL";
     char q[512]={0};
     sprintf(q,"%s,\"%s\",%f,%f,%f,%f);",buf,data.time,data.temputer,data.oxy,data.PH,data.depth);
+    /*
     printf("%s\n",q);
+    printf("%s-->temputer = %f\n",data.sendname,data.temputer);
+    printf("%s-->oxy = %f\n",data.sendname,data.oxy);
+    printf("%s-->PH = %f\n",data.sendname,data.PH);
+    printf("%s-->depth = %f\n",data.sendname,data.depth);
+    printf("%s-->time = %s\n",data.sendname,data.time);
+    */
     int ret = sqlite3_exec(pdb,q,NULL,NULL,NULL);
     if(ret !=SQLITE_OK)
     {
@@ -62,6 +69,7 @@ void *sqlite_data(void *p)
         if(ret != -1)
         {
             storage_message(q);
+            sqlite3_exec(pdb,"commit;",NULL,NULL,NULL);
         }
     }
     close_sqlite();

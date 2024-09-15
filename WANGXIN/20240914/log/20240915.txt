@@ -1,0 +1,51 @@
+[2024-09-15  15:18:29][INFO]   网络接收进程开启
+[2024-09-15  15:18:29][INFO]   网页浏览进程开启
+[2024-09-15  15:18:29][INFO]   数据库存储进程开启
+_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname
+[2024-09-15  14:19:00][WARNING]recv_mail fail: dont`t find recvname

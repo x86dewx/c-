@@ -115,7 +115,7 @@ void *get_tm_th(void *p)
         Mdatatype q={0};
         get_time();
         char buf[64]={0};
-        sprintf(buf,"%d-%02d-%02d  %02d:%02d:%02d",timeinfo->tm_year+1900,timeinfo->tm_mon+1,timeinfo->tm_mday,timeinfo->tm_hour,timeinfo->tm_min,timeinfo->tm_sec);
+        sprintf(buf,"%d-%02d-%02d %02d:%02d:%02d",timeinfo->tm_year+1900,timeinfo->tm_mon+1,timeinfo->tm_mday,timeinfo->tm_hour,timeinfo->tm_min,timeinfo->tm_sec);
         q.temputer=temputer;
         q.oxy=oxy;
         q.PH=PH;
@@ -130,6 +130,9 @@ void *get_tm_th(void *p)
         send_mail("报警",pr,q);
         strcpy(q.recvname,"数据库存储");
         send_mail("数据库存储",pr,q);
+        sprintf(buf,"%d%02d%02d%02d%02d%02d",timeinfo->tm_year+1900,timeinfo->tm_mon+1,timeinfo->tm_mday,timeinfo->tm_hour,timeinfo->tm_min,timeinfo->tm_sec);
+        strcpy(q.time,buf);
+        send_mail("连接服务器",pr,q);
         sleep(3);
 
     }
@@ -194,10 +197,10 @@ void *local_commend_center(void *p)
             // kill(getpid(),2);
             if(!strcmp(q.sendname,"获取数据"))
             {
-                printf("%s-->temputer = %f\n",q.sendname,q.temputer);
-                printf("%s-->oxy = %f\n",q.sendname,q.oxy);
-                printf("%s-->PH = %f\n",q.sendname,q.PH);
-                printf("%s-->depth = %f\n",q.sendname,q.depth);
+                //printf("%s-->temputer = %f\n",q.sendname,q.temputer);
+                //printf("%s-->oxy = %f\n",q.sendname,q.oxy);
+                //printf("%s-->PH = %f\n",q.sendname,q.PH);
+                //printf("%s-->depth = %f\n",q.sendname,q.depth);
                 printf("%s-->time = %s\n",q.sendname,q.time);
             }
             /*
