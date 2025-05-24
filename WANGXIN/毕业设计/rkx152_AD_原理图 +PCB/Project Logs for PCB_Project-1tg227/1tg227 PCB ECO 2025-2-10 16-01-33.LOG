@@ -1,0 +1,266 @@
+Removed Pin From Net: NetName=VCC3V3 Pin=C2-2
+Removed Pin From Net: NetName=KEY_3 Pin=C3-2
+Removed Pin From Net: NetName=GND Pin=C4-1
+Removed Pin From Net: NetName=KEY_4 Pin=C4-2
+Removed Pin From Net: NetName=KEY_5 Pin=C5-2
+Removed Pin From Net: NetName=KEY_6 Pin=C6-2
+Removed Pin From Net: NetName=LED3 Pin=D4-A
+Removed Pin From Net: NetName=NetD4_K Pin=D4-K
+Removed Pin From Net: NetName=LED4 Pin=D5-A
+Removed Pin From Net: NetName=NetD5_K Pin=D5-K
+Removed Pin From Net: NetName=KEY_3 Pin=K4-2
+Removed Pin From Net: NetName=GND Pin=K4-3
+Removed Pin From Net: NetName=KEY_4 Pin=K5-2
+Removed Pin From Net: NetName=GND Pin=K5-3
+Removed Pin From Net: NetName=KEY_5 Pin=K6-2
+Removed Pin From Net: NetName=KEY_6 Pin=K7-2
+Removed Pin From Net: NetName=DS18B20 Pin=P3-2
+Removed Pin From Net: NetName=VCC3V3 Pin=P5-1
+Removed Pin From Net: NetName=GND Pin=P6-1
+Removed Pin From Net: NetName=GND Pin=P6-2
+Removed Pin From Net: NetName=USART1_RX Pin=P6-3
+Removed Pin From Net: NetName=USART1_TX Pin=P6-4
+Removed Pin From Net: NetName=VCC5V Pin=P6-5
+Removed Pin From Net: NetName=DS18B20 Pin=R2-1
+Removed Pin From Net: NetName=NetD4_K Pin=R3-2
+Removed Pin From Net: NetName=KEY_3 Pin=R5-2
+Removed Pin From Net: NetName=VCC3V3 Pin=R6-1
+Removed Pin From Net: NetName=KEY_4 Pin=R6-2
+Removed Pin From Net: NetName=KEY_5 Pin=R7-2
+Removed Pin From Net: NetName=KEY_6 Pin=R13-2
+Removed Pin From Net: NetName=GND Pin=R15-1
+Removed Pin From Net: NetName=NetD5_K Pin=R15-2
+Removed Pin From Net: NetName=KEY_3 Pin=U7-21
+Removed Pin From Net: NetName=KEY_4 Pin=U7-22
+Removed Pin From Net: NetName=KEY_5 Pin=U7-25
+Removed Pin From Net: NetName=KEY_6 Pin=U7-26
+Removed Pin From Net: NetName=beek Pin=U7-27
+Removed Pin From Net: NetName=Trig_4 Pin=U7-43
+Removed Pin From Net: NetName=Echo_4 Pin=U7-45
+Removed Pin From Net: NetName=DS18B20 Pin=U7-46
+Removed Member From Class: ClassName=SCH_12k075 Member=D5
+Removed Member From Class: ClassName=SCH_12k075 Member=K4
+Removed Member From Class: ClassName=SCH_12k075 Member=K5
+Change Component Footprint: Designator=P6 Old Footprint=HDR1X5 New Footprint=HDR1X4
+Change Component Footprint: Designator=C4 Old Footprint=LC-0603_C New Footprint=CAP+_47UF_FIRE
+Change Component Footprint: Designator=C3 Old Footprint=LC-0603_C New Footprint=CAP_0603_FIRE
+Change Component Footprint: Designator=R3 Old Footprint=LC-0603_R New Footprint=RES_0603_FIRE
+Change Component Footprint: Designator=R5 Old Footprint=LC-0603_R New Footprint=RES_0603_FIRE
+Change Component Footprint: Designator=R6 Old Footprint=LC-0603_R New Footprint=RES_0603_FIRE
+Change Component Footprint: Designator=R15 Old Footprint=LC-0603_R New Footprint=RES_0603_FIRE
+Change Component Footprint: Designator=D4 Old Footprint=LED_RED_0603_FIRE New Footprint=DO-214AC(SSxxx)
+Change Component Comment : Designator=C4 Old Comment=CAP_0.1UF_0603_FIRE New Comment=CAP+_47UF_FIRE
+Change Component Comment : Designator=P6 Old Comment=Header 5 New Comment=Header 4
+Change Component Comment : Designator=D4 Old Comment=LED_RED_0603_FIRE New Comment=IN5824
+Change Component Comment : Designator=R3 Old Comment=RES New Comment=RES_10K_0603_FIRE
+Change Component Comment : Designator=R5 Old Comment=RES New Comment=RES_10K_0603_FIRE
+Change Component Comment : Designator=R6 Old Comment=RES New Comment=RES_10K_0603_FIRE
+Change Component Comment : Designator=R15 Old Comment=RES New Comment=RES_10K_0603_FIRE
+Change component parameters: Designator = "C4"; Footprint = "CAP+_47UF_FIRE"; UniqueID = "\NEDVFFUQ"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Assembly"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Cost"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Geometry.Height"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacture 1"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacture 1 P/N"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PCB DECAL"; Value = "CAP+_47UF_FIRE"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Serial Number"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "47UF"; VariantName = "[No Variations]"
+Change component parameters: Designator = "D4"; Footprint = "DO-214AC(SSxxx)"; UniqueID = "\QXRPYKFI"
+Change component parameters. Clean all parameters for all variants
+Change component parameters: Designator = "R5"; Footprint = "RES_0603_FIRE"; UniqueID = "\GDEKFNXT"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Assembly"; Value = "SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Cost"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Geometry.Height"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacture 1"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacture 1 P/N"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PCB DECAL"; Value = "RES_0603_FIRE"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Serial Number"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R6"; Footprint = "RES_0603_FIRE"; UniqueID = "\MDMGMIDF"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Assembly"; Value = "SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Cost"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Geometry.Height"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacture 1"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacture 1 P/N"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PCB DECAL"; Value = "RES_0603_FIRE"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Serial Number"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R3"; Footprint = "RES_0603_FIRE"; UniqueID = "\BNCJUHTS"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Assembly"; Value = "SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Cost"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Geometry.Height"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacture 1"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacture 1 P/N"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PCB DECAL"; Value = "RES_0603_FIRE"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Serial Number"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R15"; Footprint = "RES_0603_FIRE"; UniqueID = "\UMIPUTNP"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Assembly"; Value = "SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Cost"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Geometry.Height"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacture 1"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacture 1 P/N"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "PCB DECAL"; Value = "RES_0603_FIRE"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Serial Number"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Added Component: Designator=C15(LC-0805_C)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "Radial Cap, Thru-Hole; 2 Leads; 0.3 in Pin Spacing"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "RAD-0.3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10uF"; VariantName = "[No Variations]"
+Added Component: Designator=C18(LC-0603_C)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Assembly"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Cost"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Geometry.Height"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacture 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacture 1 P/N"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PCB DECAL"; Value = "CAP_0603_FIRE"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Serial Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "0.1UF"; VariantName = "[No Variations]"
+Added Component: Designator=Q2(SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "BOM_JLCPCB Part Class"; Value = "Extended Part"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "BOM_Manufacturer"; Value = "YONGYUTAI(”¿‘£Ã©)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "BOM_Manufacturer Part"; Value = "SI2302"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "BOM_Supplier"; Value = "LCSC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "BOM_Supplier Part"; Value = "C2891732"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contributor"; Value = "LCSC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "spicePre"; Value = "Q"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "spiceSymbolName"; Value = "SI2302_C2891732"; VariantName = "[No Variations]"
+Added Component: Designator=Q3(SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "BOM_JLCPCB Part Class"; Value = "Extended Part"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "BOM_Manufacturer"; Value = "YONGYUTAI(”¿‘£Ã©)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "BOM_Manufacturer Part"; Value = "SI2302"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "BOM_Supplier"; Value = "LCSC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "BOM_Supplier Part"; Value = "C2891732"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contributor"; Value = "LCSC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "spicePre"; Value = "Q"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "spiceSymbolName"; Value = "SI2302_C2891732"; VariantName = "[No Variations]"
+Added Component: Designator=R9(RES_0603_FIRE)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Assembly"; Value = "SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Cost"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Geometry.Height"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacture 1"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacture 1 P/N"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PCB DECAL"; Value = "RES_0603_FIRE"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Serial Number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "10K"; VariantName = "[No Variations]"
+Added Component: Designator=R10(LC-0603_R)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "10k"; VariantName = "[No Variations]"
+Added Component: Designator=R16(LC-0603_R)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Value"; Value = "1k"; VariantName = "[No Variations]"
+Added Component: Designator=U3(ESP-12S Module)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=VCC5V Pin=C2-2
+Added Pin To Net: NetName=VCC3V3 Pin=C3-2
+Added Pin To Net: NetName=VCC3V3 Pin=C4-1
+Added Pin To Net: NetName=GND Pin=C4-2
+Added Pin To Net: NetName=VCC3V3 Pin=C5-2
+Added Pin To Net: NetName=VCC3V3 Pin=C6-2
+Added Pin To Net: NetName=GND Pin=C15-1
+Added Pin To Net: NetName=VCC5V Pin=C15-2
+Added Pin To Net: NetName=GND Pin=C18-1
+Added Pin To Net: NetName=VCC5V Pin=C18-2
+Added Pin To Net: NetName=KEY_6 Pin=D4-1
+Added Pin To Net: NetName=VCC5V Pin=D4-2
+Added Pin To Net: NetName=VCC3V3 Pin=K6-2
+Added Pin To Net: NetName=VCC3V3 Pin=K7-2
+Added Pin To Net: NetName=VCC5V Pin=P5-1
+Added Pin To Net: NetName=VCC5V Pin=P6-1
+Added Pin To Net: NetName=KEY_6 Pin=P6-2
+Added Pin To Net: NetName=GND Pin=P6-4
+Added Pin To Net: NetName=NetD4_K Pin=Q2-1
+Added Pin To Net: NetName=GND Pin=Q2-2
+Added Pin To Net: NetName=NetD5_K Pin=Q2-3
+Added Pin To Net: NetName=GND Pin=Q3-2
+Added Pin To Net: NetName=KEY_6 Pin=Q3-3
+Added Pin To Net: NetName=KEY_5 Pin=R5-2
+Added Pin To Net: NetName=VCC3V3 Pin=R6-2
+Added Pin To Net: NetName=VCC3V3 Pin=R7-2
+Added Pin To Net: NetName=NetD5_K Pin=R9-1
+Added Pin To Net: NetName=VCC3V3 Pin=R9-2
+Added Pin To Net: NetName=KEY_6 Pin=R10-1
+Added Pin To Net: NetName=VCC5V Pin=R10-2
+Added Pin To Net: NetName=VCC3V3 Pin=R13-1
+Added Pin To Net: NetName=VCC3V3 Pin=R13-2
+Added Pin To Net: NetName=KEY_4 Pin=R15-1
+Added Pin To Net: NetName=NetD4_K Pin=R15-2
+Added Pin To Net: NetName=GND Pin=U3-0
+Added Pin To Net: NetName=GND Pin=U3-1
+Added Pin To Net: NetName=KEY_5 Pin=U3-4
+Added Pin To Net: NetName=DS18B20 Pin=U3-7
+Added Pin To Net: NetName=KEY_3 Pin=U3-8
+Added Pin To Net: NetName=NetD5_K Pin=U3-9
+Added Pin To Net: NetName=NetD5_K Pin=U3-12
+Added Pin To Net: NetName=VCC3V3 Pin=U3-16
+Added Pin To Net: NetName=DS18B20 Pin=U7-21
+Added Pin To Net: NetName=KEY_3 Pin=U7-22
+Added Pin To Net: NetName=VCC3V3 Pin=U7-25
+Added Pin To Net: NetName=VCC3V3 Pin=U7-26
+Added Pin To Net: NetName=KEY_5 Pin=U7-45
+Added Pin To Net: NetName=KEY_4 Pin=U7-46
+Change Net Name : Old Net Name=DS18B20 New Net Name=WIFI_UTXD
+Change Net Name : Old Net Name=Echo_2 New Net Name=USART2_RX
+Change Net Name : Old Net Name=KEY_3 New Net Name=WIFI_URXD
+Change Net Name : Old Net Name=KEY_4 New Net Name=WIFI_RST
+Change Net Name : Old Net Name=KEY_5 New Net Name=WIFI_EN
+Change Net Name : Old Net Name=KEY_6 New Net Name=NetD4_1
+Change Net Name : Old Net Name=NetD4_K New Net Name=NetQ2_1
+Change Net Name : Old Net Name=NetD5_K New Net Name=NetQ2_3
+Change Net Name : Old Net Name=Trig_2 New Net Name=USART2_TX
+Change Net Name : Old Net Name=VCC3V3 New Net Name=KEY_5
+Added Pin To Net: NetName=DHT11 Pin=P3-2
+Added Pin To Net: NetName=DHT11 Pin=R2-1
+Added Pin To Net: NetName=DHT11 Pin=U7-43
+Added Net: Name=DHT11
+Added Pin To Net: NetName=humi_pwm Pin=R16-1
+Added Pin To Net: NetName=humi_pwm Pin=U7-27
+Added Net: Name=humi_pwm
+Added Pin To Net: NetName=NetQ3_1 Pin=Q3-1
+Added Pin To Net: NetName=NetQ3_1 Pin=R16-2
+Added Net: Name=NetQ3_1
+Added Pin To Net: NetName=NetR3_2 Pin=R3-2
+Added Pin To Net: NetName=NetR3_2 Pin=U3-2
+Added Net: Name=NetR3_2
+Added Pin To Net: NetName=NetR6_1 Pin=R6-1
+Added Pin To Net: NetName=NetR6_1 Pin=U3-11
+Added Net: Name=NetR6_1
+Change Class Name : Old Net Name=SCH_12k075 New Net Name=1tg227
+Added Member To Class: ClassName=1tg227 Member=Component C15 104
+Added Member To Class: ClassName=1tg227 Member=Component C18 CAP_0.1UF_0603_FIRE
+Added Member To Class: ClassName=1tg227 Member=Component Q2 SI2302_C2891732
+Added Member To Class: ClassName=1tg227 Member=Component Q3 SI2302_C2891732
+Added Member To Class: ClassName=1tg227 Member=Component R9 RES_10K_0603_FIRE
+Added Member To Class: ClassName=1tg227 Member=Component R10 RES
+Added Member To Class: ClassName=1tg227 Member=Component R16 RES
+Added Member To Class: ClassName=1tg227 Member=Component U3 ESP12-F
+Added Member To Class: ClassName=1tg227 Member=Component U7 STM32F103C8T6
+Added Room: Name=1tg227

@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=humi_pwm Pin=U7-28
+Removed Pin From Net: NetName=WIFI_RST Pin=U7-46
+Added Pin To Net: NetName=WIFI_RST Pin=U7-28
+Added Pin To Net: NetName=humi_pwm Pin=U7-46
+Added Member To Class: ClassName=1tg227 Member=Component P7 HC-SR04
+Added Room: Name=1tg227

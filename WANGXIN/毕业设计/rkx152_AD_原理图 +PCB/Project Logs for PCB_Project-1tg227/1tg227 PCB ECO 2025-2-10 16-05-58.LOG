@@ -1,0 +1,20 @@
+Removed Pin From Net: NetName=KEY_5 Pin=C5-2
+Removed Pin From Net: NetName=KEY_5 Pin=C6-2
+Removed Pin From Net: NetName=KEY_5 Pin=K6-2
+Removed Pin From Net: NetName=KEY_5 Pin=K7-2
+Removed Pin From Net: NetName=KEY_5 Pin=R7-2
+Removed Pin From Net: NetName=KEY_5 Pin=R13-2
+Removed Pin From Net: NetName=KEY_5 Pin=U7-25
+Removed Pin From Net: NetName=KEY_5 Pin=U7-26
+Change Net Name : Old Net Name=KEY_5 New Net Name=VCC3V3
+Added Pin To Net: NetName=KEY_5 Pin=C5-2
+Added Pin To Net: NetName=KEY_5 Pin=K6-2
+Added Pin To Net: NetName=KEY_5 Pin=R7-2
+Added Pin To Net: NetName=KEY_5 Pin=U7-25
+Added Net: Name=KEY_5
+Added Pin To Net: NetName=KEY_6 Pin=C6-2
+Added Pin To Net: NetName=KEY_6 Pin=K7-2
+Added Pin To Net: NetName=KEY_6 Pin=R13-2
+Added Pin To Net: NetName=KEY_6 Pin=U7-26
+Added Net: Name=KEY_6
+Added Room: Name=1tg227

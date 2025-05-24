@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=humi_pwm Pin=U7-27
+Added Pin To Net: NetName=beek Pin=U7-27
+Added Pin To Net: NetName=humi_pwm Pin=U7-28
+Added Member To Class: ClassName=1tg227 Member=Component P6 Header 5
+Added Member To Class: ClassName=1tg227 Member=Component P7 HC-SR04
+Added Room: Name=1tg227
